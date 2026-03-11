@@ -30,6 +30,56 @@ python train_sft.py
 
 经过 20 步极小训练验证，loss 从 10.83 降至 10.71，证明数据加载和训练流程正常。后续可在云端或本地进行更大规模训练。
 
+训练日志（极小验证示例）
+以下是在 CPU 上运行 20 步的训练日志，验证了数据加载和训练流程的正常：
+number of parameters: 3.32M
+num decayed parameter tensors: 10, with 3,321,856 parameters
+num non-decayed parameter tensors: 5, with 320 parameters
+using fused AdamW: False
+batch 0: mask sum = 64.0
+iter 0: loss 10.8292
+batch 1: mask sum = 64.0
+iter 1: loss 10.8204
+batch 2: mask sum = 64.0
+iter 2: loss 10.7983
+batch 3: mask sum = 64.0
+iter 3: loss 10.7853
+batch 4: mask sum = 64.0
+iter 4: loss 10.8373
+batch 5: mask sum = 64.0
+iter 5: loss 10.8121
+batch 6: mask sum = 64.0
+iter 6: loss 10.7926
+batch 7: mask sum = 64.0
+iter 7: loss 10.8193
+batch 8: mask sum = 64.0
+iter 8: loss 10.8498
+batch 9: mask sum = 64.0
+iter 9: loss 10.7568
+batch 10: mask sum = 64.0
+iter 10: loss 10.7798
+step 10: val loss 10.7667
+batch 11: mask sum = 64.0
+iter 11: loss 10.7744
+batch 12: mask sum = 64.0
+iter 12: loss 10.8828
+batch 13: mask sum = 64.0
+iter 13: loss 10.7537
+batch 14: mask sum = 64.0
+iter 14: loss 10.8623
+batch 15: mask sum = 64.0
+iter 15: loss 10.7270
+batch 16: mask sum = 64.0
+iter 16: loss 10.7153
+batch 17: mask sum = 64.0
+iter 17: loss 10.7335
+batch 18: mask sum = 64.0
+iter 18: loss 10.7749
+batch 19: mask sum = 64.0
+iter 19: loss 10.7129
+验证完成！
+
+可以看到 loss 从初始 10.83 逐步下降至 10.71，mask 总和始终为 64，表明数据加载正确，训练流程正常。这是仅训练 20 步的极小验证，更长时间的训练可预期 loss 进一步下降，模型学会角色风格。
 ## 文件结构
 ```
 .
