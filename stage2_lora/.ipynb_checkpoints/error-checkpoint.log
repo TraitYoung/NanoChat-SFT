@@ -1,0 +1,58 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                 | 0/290 [00:00<?, ?it/s]Loading weights:  11%|▊      | 33/290 [00:00<00:00, 328.64it/s]Loading weights:  42%|██▌   | 123/290 [00:00<00:00, 636.16it/s]Loading weights:  74%|████▍ | 215/290 [00:00<00:00, 761.84it/s]Loading weights: 100%|██████| 290/290 [00:00<00:00, 741.92it/s]
+trainable params: 8,798,208 || all params: 502,830,976 || trainable%: 1.7497
+  0%|                                  | 0/615 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 731, in convert_to_tensors
+    tensor = as_tensor(value)
+             ^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 690, in as_tensor
+    return torch.tensor(value, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: expected sequence of length 512 at dim 1 (got 237)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MyGPT_Project/stage2_lora/train.lora.py", line 84, in <module>
+    trainer.train()
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/trainer.py", line 1424, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/trainer.py", line 1506, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/trainer.py", line 1701, in _run_epoch
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, self.args.device)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/trainer.py", line 2102, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/accelerate/data_loader.py", line 577, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/data/data_collator.py", line 42, in __call__
+    return self.torch_call(features)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/data/data_collator.py", line 774, in torch_call
+    batch = pad_without_fast_tokenizer_warning(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/data/data_collator.py", line 63, in pad_without_fast_tokenizer_warning
+    padded = tokenizer.pad(*pad_args, **pad_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 2715, in pad
+    return BatchEncoding(batch_outputs, tensor_type=return_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 240, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/root/miniconda3/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 747, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`labels` in this case) have excessive nesting (inputs type `list` where type `int` is expected).
+  0%|          | 0/615 [00:00<?, ?it/s]                        

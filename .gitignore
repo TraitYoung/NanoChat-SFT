@@ -1,0 +1,7 @@
+*.json
+*.jsonl
+out-sft-test/
+qwen/
+qwen2_lora_result/
+__pycache__/
+*.pt

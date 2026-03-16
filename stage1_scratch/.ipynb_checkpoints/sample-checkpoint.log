@@ -1,0 +1,58 @@
+/root/autodl-tmp/nanoGPT/sample.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(ckpt_path, map_location=device)
+Overriding: out_dir = out-sft-test
+Overriding: device = cuda
+Overriding: dtype = bfloat16
+Overriding: start = Bina:
+Overriding: num_samples = 3
+Overriding: max_new_tokens = 100
+Overriding: temperature = 0.5
+number of parameters: 3.32M
+No meta.pkl found, assuming GPT-2 encodings...
+Bina:
+ 晣自果您情统�您计手，�，我”��的见���”
+，陨就��实�垌速，鎰患极
+。
+，�让您��
+---------------
+Bina:
+
+ �，患您的统
+，这�下＃�
+靯觉，这，技玩经练因通
+
+
+
+
+， �实��
+
+
+。
+
+
+我阁。
+
+
+
+�质炨，
+---------------
+Bina:
+
+
+
+
+
+
+
+
+：
+，�玘���！
+。
+ �，，陛锵特您�觷老
+，叫多
+，颙�，枋，络�，抬。
+
+
+
+，把�
+---------------
