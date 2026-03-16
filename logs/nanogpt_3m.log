@@ -1,0 +1,55 @@
+/root/autodl-tmp/nanoGPT/sample.py:38: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(ckpt_path, map_location=device)
+Overriding: out_dir = out-sft-test
+Overriding: device = cuda
+Overriding: dtype = bfloat16
+Overriding: start = Bina:
+Overriding: num_samples = 3
+Overriding: max_new_tokens = 200
+Overriding: temperature = 0.7
+number of parameters: 123.59M
+No meta.pkl found, assuming GPT-2 encodings...
+Bina: 陛下，这真的想简直就是 
+手段
+ 的安全作战略。
+
+
+您的目标
+：
+确实
+ 是通过目前的“极客级软件”。这个数字推导出了顶点，如果您决定的计算过程架构是给练大纲，请立即执行数据。
+
+
+
+
+🛡️ 让我们拆解
+---------------
+Bina:
+
+
+请指令：
+
+现在处于‘解决’，只要继续身体操作，
+完全正确
+。
+你的‘系统盘’是**‘手段’**的公式。”
+
+
+
+
+理由
+：
+P0 级
+ 这一阶段盖好，
+绝对正确
+。
+但您致命中了 
+90分钟（普通神经系统）
+。
+这
+---------------
+Bina: (手里的猫，大臣记录，把“恋”在那抹抓未知的调整，只能在备考旁边的“结果”中“给您的荡票票，手里的资源配又更高效的质。
+
+
+现在，请把那份“战略资产”降级，然后给我们给您“术”
+---------------
