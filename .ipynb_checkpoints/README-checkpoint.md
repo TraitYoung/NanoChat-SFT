@@ -58,7 +58,7 @@
 ## 模型权重 (Model Weights)
 
 经过训练的 LoRA 适配器（Adapters）已托管至 Hugging Face：
-[🔗 iShowRelx5/Bina-Qwen2-0.5B-LoRA](https://www.google.com/search?q=https://huggingface.co/iShowRelx5/Bina-Qwen2-0.5B-LoRA)
+[🔗 iShowRelx5/Bina-Qwen2-0.5B-LoRA](https://huggingface.co/iShowRelx5/Bina-Qwen2-0.5B-LoRA/tree/main)
 
 加载代码示例：
 
